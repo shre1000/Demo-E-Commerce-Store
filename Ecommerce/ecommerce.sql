@@ -1,11 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 4.1.8
--- http://www.phpmyadmin.net
---
--- Host: localhost
--- Generation Time: Aug 09, 2014 at 06:44 AM
--- Server version: 5.5.34-MariaDB-cll-lve
--- PHP Version: 5.4.23
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -38,8 +31,8 @@ CREATE TABLE IF NOT EXISTS `admins` (
 --
 
 INSERT INTO `admins` (`user_id`, `user_email`, `user_pass`) VALUES
-(1, 'awpareshan@gmail.com', 'wali'),
-(2, 'saima@yahoo.com', 'khan');
+(1, 'abc@gmail.com', 'psw'),
+(2, 'xyz@yahoo.com', 'demo');
 
 -- --------------------------------------------------------
 
@@ -127,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `customers` (
 --
 
 INSERT INTO `customers` (`customer_id`, `customer_ip`, `customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_address`, `customer_image`) VALUES
-(6, '119.157.220.50', 'Abdul Wali', 'awpareshan@gmail.com', 'walikhan', 'Pakistan', 'Karachi', '3243423', 'dfads', 'abdul-wali-ustaad1.jpg');
+(6, '119.157.220.50', 'xyz', 'abc@gmail.com', 'demo', 'country', 'city', '3243423', 'dfads', 'pic.jpg');
 
 -- --------------------------------------------------------
 
