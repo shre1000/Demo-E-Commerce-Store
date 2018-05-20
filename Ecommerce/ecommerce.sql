@@ -10,7 +10,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `onlinetu_ecommerce`
+-- Database: `ecommerce`
 --
 
 -- --------------------------------------------------------
@@ -92,7 +92,7 @@ INSERT INTO `categories` (`cat_id`, `cat_title`) VALUES
 (2, 'Cameras'),
 (3, 'Mobiles'),
 (4, 'Computers'),
-(5, 'Banana'),
+(5, 'Tablets'),
 (6, 'iPhones');
 
 -- --------------------------------------------------------
@@ -120,7 +120,7 @@ CREATE TABLE IF NOT EXISTS `customers` (
 --
 
 INSERT INTO `customers` (`customer_id`, `customer_ip`, `customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_address`, `customer_image`) VALUES
-(6, '119.157.220.50', 'xyz', 'abc@gmail.com', 'demo', 'country', 'city', '3243423', 'dfads', 'pic.jpg');
+(6, '119.157.220.50', 'xyz', 'abc@gmail.com', 'demo', 'USA', 'NY', '3243423', 'dfads', 'pic.jpg');
 
 -- --------------------------------------------------------
 
@@ -145,13 +145,13 @@ CREATE TABLE IF NOT EXISTS `orders` (
 
 INSERT INTO `orders` (`order_id`, `p_id`, `c_id`, `qty`, `invoice_no`, `status`, `order_date`) VALUES
 (5, 8, 5, 1, 462643381, 'Completed', '0000-00-00'),
-(6, 6, 5, 3, 481994459, 'Completed', '2014-07-21'),
-(7, 9, 0, 1, 1545302558, 'Completed', '2014-07-23'),
-(8, 5, 0, 2, 705705316, 'in Progress', '2014-08-08'),
-(9, 7, 6, 1, 1935681132, 'in Progress', '2014-08-08'),
-(10, 9, 6, 3, 1817786416, 'in Progress', '2014-08-08'),
-(11, 5, 6, 2, 423122154, 'in Progress', '2014-08-08'),
-(12, 8, 6, 4, 496641685, 'in Progress', '2014-08-08');
+(6, 6, 5, 3, 481994459, 'Completed', '2016-07-21'),
+(7, 9, 0, 1, 1545302558, 'Completed', '2016-07-23'),
+(8, 5, 0, 2, 705705316, 'in Progress', '2016-08-08'),
+(9, 7, 6, 1, 1935681132, 'in Progress', '2016-08-08'),
+(10, 9, 6, 3, 1817786416, 'in Progress', '2016-08-08'),
+(11, 5, 6, 2, 423122154, 'in Progress', '2016-08-08'),
+(12, 8, 6, 4, 496641685, 'in Progress', '2016-08-08');
 
 -- --------------------------------------------------------
 
@@ -178,15 +178,15 @@ INSERT INTO `payments` (`payment_id`, `amount`, `customer_id`, `product_id`, `tr
 (1, 800, 5, 6, '31B07494JS505133P', 'USD', '0000-00-00'),
 (2, 500, 5, 9, '18747053K31546734', 'USD', '0000-00-00'),
 (3, 1000, 5, 9, '183154524M7953521', 'USD', '0000-00-00'),
-(4, 900, 5, 5, '8L053110TE658224T', 'USD', '2014-07-21'),
-(5, 450, 5, 8, '42M62596JN658381G', 'USD', '2014-07-21'),
-(6, 600, 5, 6, '1FC71986FP579232R', 'USD', '2014-07-21'),
-(7, 500, 0, 9, '0AH67056C64289013', 'USD', '2014-07-23'),
-(8, 1800, 0, 5, '1F431738AY795223E', 'USD', '2014-08-08'),
-(9, 250, 6, 7, '3G918931JL634141Y', 'USD', '2014-08-08'),
-(10, 1500, 6, 9, '0BF7586175203573G', 'USD', '2014-08-08'),
-(11, 1800, 6, 5, '7RS823437E828061K', 'USD', '2014-08-08'),
-(12, 1800, 6, 8, '84J65197FN011600G', 'USD', '2014-08-08');
+(4, 900, 5, 5, '8L053110TE658224T', 'USD', '2016-07-21'),
+(5, 450, 5, 8, '42M62596JN658381G', 'USD', '2016-07-21'),
+(6, 600, 5, 6, '1FC71986FP579232R', 'USD', '2016-07-21'),
+(7, 500, 0, 9, '0AH67056C64289013', 'USD', '2016-07-23'),
+(8, 1800, 0, 5, '1F431738AY795223E', 'USD', '2016-08-08'),
+(9, 250, 6, 7, '3G918931JL634141Y', 'USD', '2016-08-08'),
+(10, 1500, 6, 9, '0BF7586175203573G', 'USD', '2016-08-08'),
+(11, 1800, 6, 5, '7RS823437E828061K', 'USD', '2016-08-08'),
+(12, 1800, 6, 8, '84J65197FN011600G', 'USD', '2016-08-08');
 
 -- --------------------------------------------------------
 
@@ -211,12 +211,12 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`product_id`, `product_cat`, `product_brand`, `product_title`, `product_price`, `product_desc`, `product_image`, `product_keywords`) VALUES
-(5, 3, 4, 'Samsung Camera', 900, '<p>This is a great samsung mobile, you must buy it in order to have some really good fun.&nbsp;</p>', 'Samsung-Galaxy-Tab-tablet.jpg', 'Samsung, Cameras, Special'),
-(6, 3, 6, 'HTC mobile ', 200, '<p>this one is a great one.</p>', 'HTC-Google-Nexus-One-2.jpg', 'mobiles, new, special'),
-(7, 2, 6, 'Toshiba Camera ', 250, '<p>This is a great camera...</p>', 'professional-video-camera.jpg', 'Toshiba, cameras, Special'),
-(8, 3, 5, 'Nokia Tablet', 450, '<p>this is a great thing....</p>', 'nokia-windows-200-dollar-tablet2-640x353.jpg', 'Samsung, Cameras, Special'),
-(9, 1, 2, 'Dell Pink Laptop', 500, '<p>this is a very nice <strong>laptop</strong> and I like it very much....</p>', '1.jpg', 'dell, laptops, new, special'),
-(10, 1, 1, 'HP Envy Laptop', 400, '<p>this is so much nice laptop..</p>', 'original.jpg', 'dell, laptops, new, special');
+(5, 3, 4, 'Samsung Camera', 900, '<p>Description.&nbsp;</p>', 'img.jpg', 'Samsung, Cameras, Special'),
+(6, 3, 6, 'HTC mobile ', 200, '<p>Description.</p>', 'img.jpg', 'mobiles, new, special'),
+(7, 2, 6, 'Toshiba Camera ', 250, '<p>Description</p>', 'img.jpg', 'Toshiba, cameras, Special'),
+(8, 3, 5, 'Nokia Tablet', 450, '<p>Description</p>', 'img.jpg', 'Samsung, Cameras, Special'),
+(9, 1, 2, 'Dell Laptop', 500, '<p>Description <strong>laptop</strong> Description</p>', 'img.jpg', 'dell, laptops, new, special'),
+(10, 1, 1, 'HP Laptop', 400, '<p>Description</p>', 'img.jpg', 'dell, laptops, new, special');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
