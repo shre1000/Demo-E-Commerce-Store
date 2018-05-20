@@ -138,7 +138,7 @@ include("functions/functions.php");
 		
 		<div id="footer">
 		
-		<h2 style="text-align:center; padding-top:30px;">&copy; 2014 </h2>
+		<h2 style="text-align:center; padding-top:30px;">&copy; 2016 </h2>
 		
 		</div>
 	
